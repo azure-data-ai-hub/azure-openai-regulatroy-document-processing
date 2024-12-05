@@ -1,0 +1,9 @@
+azure-functions
+azure-cosmos
+azure-identity
+azure-storage-blob
+requests
+PyMuPDF
+openai
+python-dotenv
+azure-core
