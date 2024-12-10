@@ -7,3 +7,4 @@ PyMuPDF
 openai
 python-dotenv
 azure-core
+azure.ai.documentintelligence --pre

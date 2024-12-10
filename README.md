@@ -1,15 +1,30 @@
-Here is the transformed `README.md` in a proper format:
-
 # Azure OpenAI Regulatory Document Processing
 
-This repository contains an Azure Function App designed to process regulatory documents by extracting and analyzing their content using OpenAI's GPT models. The application downloads a document from Azure Blob Storage, processes it to extract text and images, sends the text to OpenAI for analysis, and stores the results in Cosmos DB.
+This repository contains an Azure Function App designed to process regulatory documents by extracting and analyzing their content using OpenAI's GPT models. The application downloads a document from Azure Blob Storage, processes it using Azure Document Intelligence to extract text and images, sends the text to OpenAI for analysis, and stores the results in Cosmos DB.
 
 ## Features
 
 - **Document Download**: Downloads documents from Azure Blob Storage.
-- **Document Processing**: Extracts text and images from PDF documents.
+- **Document Processing**: Extracts text and images from documents using Azure Document Intelligence.
 - **OpenAI Integration**: Uses OpenAI's GPT models to analyze the extracted text.
 - **Cosmos DB Storage**: Stores the analysis results in Azure Cosmos DB.
+
+## Architecture
+
+The following diagram illustrates the application's architecture:
+
+```mermaid
+flowchart TD
+    A[Client Request] --> B[Azure Function App]
+    B --> C{Check 'document_name' Parameter}
+    C -->|Present| D[Download Document from Blob Storage]
+    D --> E[Process Document using Azure Document Intelligence]
+    E --> F[Send Text to OpenAI GPT]
+    F --> G[Receive Analysis Results]
+    G --> H[Store Results in Cosmos DB]
+    H --> I[Response to Client]
+    C -->|Missing| J[Return Error Response]
+```
 
 ## Prerequisites
 
