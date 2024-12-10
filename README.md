@@ -11,6 +11,10 @@ This repository contains an Azure Function App designed to process regulatory do
 
 ## Architecture
 
+![Architecture Diagram](BPADocumentsProcessingLatest.png)
+
+## Wrofk Flow
+
 The following diagram illustrates the application's architecture:
 
 ```mermaid
@@ -61,6 +65,8 @@ flowchart TD
     BLOB_BASE_URL=<your-blob-base-url>
     AZURE_OPENAI_API_ENDPOINT=<your-openai-api-endpoint>
     OPENAI_API_KEY=<your-openai-api-key>
+    FORM_RECOGNIZER_ENDPOINT=<your-form-recognizer-endpoint>
+    FORM_RECOGNIZER_KEY=<your-form-recognizer-key>
     ```
 
 ## Usage
