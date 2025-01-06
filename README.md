@@ -9,9 +9,13 @@ This repository contains an Azure Function App designed to process regulatory do
 - **OpenAI Integration**: Uses OpenAI's GPT models to analyze the extracted text.
 - **Cosmos DB Storage**: Stores the analysis results in Azure Cosmos DB.
 
-## Architecture
+## Current Architecture
 
 ![Architecture Diagram](BPADocumentsProcessingLatest.png)
+
+## Future Architecture
+
+![Future Architecture Diagram](BPADocumentsProcessingLatest_FutureArchitecture.png)
 
 ## Wrofk Flow
 
